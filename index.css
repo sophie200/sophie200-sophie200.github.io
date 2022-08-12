@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rokkitt');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rokkitt');
+
+html, body { height: 100%; }
+body {
+  background:radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
+  overflow: hidden;
+}
+
+.ocean { 
+  height: 5%;
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  background: #015871;
+}
+
+.wave {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+  position: absolute;
+  top: -198px;
+  width: 6400px;
+  height: 198px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  top: -175px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,-25px,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
+  }
+}
+
+.profile{
+  justify-content: center;
+  display:inline-block;
+  align-items: center;
+  box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+  border-radius: 20px;
+  background: transparent;
+  padding: 2rem 4rem 4rem 4rem;
+  text-align: left;
+  width:30%;
+  margin-left: 480px;
+}
+
+.main {
+    font-family: 'Optima', sans-serif;
+    font-size: 18px;
+}
+
+#quotes {
+    font-family: 'Rokkitt', sans-serif;
+    font-size: 30px;
+}
+
+.icons{
+    display: flex;
+    justify-content: right;
+    padding: 0.8rem 0;
+    margin-left: 80px;
+    /*  */
+}
+.icons li{
+    list-style-type: none;
+    /*  */
+    /*  */
+    width: 40px;
+    height: 40px;
+    margin: 0 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+
+}
+
+a{
+  color: black;
+}
+
+.icons a{
+  color: transparent;
+}
+
+.icons li{
+  background: transparent;
+  color: black;
+}
+
+.icons li:hover{
+  background: black;
+  color: white;
+}
+
+.icons a:hover{
+  color: transparent;
+}
+
+.headings {
+    display: flex;
+}

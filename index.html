@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Sophie Xie</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    </head>
+    <body>
+        <br>
+        <br>
+        <div class="profile">
+            <div class="main">
+                <div class="headings">
+                    <h1>SOPHIE XIE</h1>
+                    <ul class = "icons">
+                        <a href="https://www.linkedin.com/in/sophie-xie-8319a2179/"><li><i class = "fab fa-linkedin"></i></li></a>
+                        <a href="https://www.instagram.com/sophie.zii/"><li><i class = "fab fa-instagram"></i></li></a>
+                        <a href="https://github.com/sophie200/"><li><i class = "fab fa-github"></i></li></a>
+                    </ul>
+                </div>
+                <p>I'm a rising freshman at UC Berkeley interested in computer science and finance. I love hot showers, heeled boots, sitcoms, and late night conversations. Here is my <a href="resume.pdf">resume</a>.</p>
+                <br>
+                <br>
+                <p>Below are some of my favorite sitcom quotes :)</p>
+            </div>
+            <br>
+            <div id="quotes"></div>
+        </div>
+
+        <script src="theater.min.js"></script>
+        <script>
+        var theater = theaterJS();
+
+        theater
+            .on("type:start, erase:start", function() {
+            // add a class to actor's dom element when he starts typing/erasing
+            var actor = theater.getCurrentActor();
+            actor.$element.classList.add("is-typing");
+            })
+            .on("type:end, erase:end", function() {
+            // and then remove it when he's done
+            var actor = theater.getCurrentActor();
+            actor.$element.classList.remove("is-typing");
+            });
+
+        theater.addActor("quotes", { accuracy: 0.6, speed: 0.8 });
+
+        theater
+            .addScene("quotes:They're old people.", 300, " They eat,", 300, " they sleep,", 300, " they complain.", " Oh my god,", 300, " I wanna be an old person.", " - Andy Dwyer", 1800)
+            .addScene("quotes: Sometimes I’ll start a sentence,", 300, " and I don’t even know where it’s going.", 300, " I just hope I find it along the way.", 300, " - Michael Scott", 1800)
+            .addScene("quotes: When life gives you lemonade,", 300, " make lemons.", 300, " Life will be all like, ‘What?!'”", 300, " - Phil Dunphy", 1800)
+            .addScene("quotes: Hi, I’m Chandler.", 300, " I make jokes when I’m uncomfortable", 300, " - Chandler Bing", 1800)
+            .addScene("quotes: And I knew exactly what to do.", 300, " But in a much more real sense,", 300, " I had no idea what to do.", 300, " - Michael Scott", 1800)
+            .addScene("quotes: In this terrifying world,", 300, "  all we have are the connections that we make.", 300, " - Bojack Horseman", 1800)
+            .addScene("quotes: I'm hopeless,", 300, "  awkward,", 300, " and desperate for love!", 300, " - Chandler Bing", 1800)
+            .addScene(theater.replay);
+        </script>
+        <div class="ocean">
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+    </body>
+</html>
