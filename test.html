@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CSS Overlaying One DIV over Another DIV</title>
+<style> 
+    .container{
+        width: 200px;
+        height: 200px;
+        position: relative;
+        margin: 20px;
+    }
+    .box{
+        width: 100%;
+        height: 100%;            
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.8;  /* for demo purpose  */
+    }
+    .stack-top{
+        z-index: 9;
+        margin: 20px; /* for demo purpose  */
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" style="background: red;">
+            <p>I'm a rising freshman at UC Berkeley interested in computer science and finance! I love hot showers, heeled boots, sitcoms, and late night conversations. Here is my <a href="resume.pdf">resume</a>.</p>
+        </div>
+        <div class="box stack-top" style="background: blue;"></div>
+    </div>
+    <h1>hello</h1>
+    <br>
+    <br>
+    <h1>hello</h1>
+    <br>
+    <br>
+    <h1>hello</h1>
+    <br>
+    <br>
+    <h1>hello</h1>
+    <br>
+    <br>
+    <h1>hello</h1>
+    <br>
+    <br>
+    <h1>hello</h1>
+    <br>
+    <br>
+    <h1>hello</h1>
+    <br>
+    <br>
+</body>
