@@ -57,13 +57,10 @@ body {
   justify-content: center;
   display:inline-block;
   align-items: center;
-  box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
   border-radius: 20px;
   background: transparent;
-  padding: 2rem 4rem 4rem 4rem;
   text-align: left;
   width:30%;
-  margin-left: 480px;
 }
 
 .main {
@@ -80,7 +77,7 @@ body {
     display: flex;
     justify-content: right;
     padding: 0.8rem 0;
-    margin-left: 80px;
+    margin-left: 5rem;
     /*  */
 }
 .icons li{
